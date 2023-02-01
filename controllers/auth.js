@@ -224,11 +224,3 @@ const sendToken = (user, statusCode, res) => {
     const token = user.getSignedToken();
     res.status(statusCode).json({ success: true, data: user.username, token })
 }
-
-
-
-
-
-
-
-
