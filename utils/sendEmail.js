@@ -22,12 +22,22 @@ const sendEmail =  async (options) => {
         html: options.text
     }
 
-    transporter.sendMail(mailOptions, function (err, info) {
-        if(err) {
-            console.log(err)
-        }else {
-            console.log(info)
-        }
+     // transporter.sendMail(mailOptions, function (err, info) {
+    //     if(err) {
+    //         console.log(err)
+    //     }else {
+    //         console.log(info)
+    //     }
+    // });
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(mailOptions, (err, info) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                resolve(info);
+            }
+        });
     });
 };
 
