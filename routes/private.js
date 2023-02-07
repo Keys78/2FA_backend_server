@@ -3,6 +3,24 @@ const { getUser, deleteUser, getAllVerifiedUsers, getAllUnverifiedUsers, activat
 const { protect, isAdmin } = require('../middlewares/authProtect');
 const router = express.Router();
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     UserDTO:
+ *       type: object
+ *       required:
+ *         - username
+ *         - email
+ *         - password
+ *       properties:
+ *         username:
+ *           type: string
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ */
 
 
 router.route('/user').get(protect, getUser);
