@@ -23,6 +23,30 @@ const router = express.Router();
  */
 
 
+/**
+  * @swagger
+  * tags:
+  *   name: User
+  */
+
+/**
+ * @swagger
+ * /user:
+ *   get:
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/UserDTO'
+ *     responses:
+ *       200:
+ *       500:
+ *         description: Some server error
+ */
+
+
 router.route('/user').get(protect, getUser);
 router.route("/activate2FA/:id").post(protect, activate2FA)
 router.route("/deactivate2FA/:id").post(protect, deactivate2FA)
