@@ -21,6 +21,24 @@ const router = express.Router();
  *         password:
  *           type: string
  */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     AdminDTO:
+ *       type: object
+ *       required:
+ *         - username
+ *         - email
+ *         - password
+ *       properties:
+ *         username:
+ *           type: string
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ */
 
 
 /**
@@ -55,7 +73,7 @@ const router = express.Router();
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/UserDTO'
+ *             $ref: '#/components/schemas/AdminDTO'
  *     responses:
  *       200:
  *       500:
