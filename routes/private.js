@@ -45,6 +45,22 @@ const router = express.Router();
  *       500:
  *         description: Some server error
  */
+/**
+ * @swagger
+ * /user:
+ *   get:
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/UserDTO'
+ *     responses:
+ *       200:
+ *       500:
+ *         description: Some server error
+ */
 
 
 router.route('/user').get(protect, getUser);
