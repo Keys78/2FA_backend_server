@@ -128,27 +128,27 @@ const { register, login, verifyEmail, verifyOTP, resendOTP } = require('../contr
  *        description: 
  */
 
-/**
- * @swagger
- * /resend-otp/{id}:
- *  post:
- *    tags: [User Auth]
- *    parameters:
- *      - in: path
- *        name: id
- *        schema:
- *          type: string
- *        required: true
- *    requestBody:
- *      required: true
- *      content:
- *        application/json:
- *          schema:
- *            $ref: '#/components/schemas/ResendOTP_DTO'
- *    responses:
- *      200:
- *        description: 
- */
+// /**
+//  * @swagger
+//  * /resend-otp/{id}:
+//  *  post:
+//  *    tags: [User Auth]
+//  *    parameters:
+//  *      - in: path
+//  *        name: id
+//  *        schema:
+//  *          type: string
+//  *        required: true
+//  *    requestBody:
+//  *      required: true
+//  *      content:
+//  *        application/json:
+//  *          schema:
+//  *            $ref: '#/components/schemas/ResendOTP_DTO'
+//  *    responses:
+//  *      200:
+//  *        description: 
+//  */
 
 
 
